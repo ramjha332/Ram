@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+
+int main() 
+{
+   char k[25]; //string length
+   int i=0,value=0,n=0; //i for loop, n for storing string length, value used for comparison
+   
+   //take string input from user
+   printf("Enter any string:");
+   scanf("%s", k);
+
+   n = strlen(k); //calculates & stores string(mention in bracket) length in n
+   
+   //to compare string first letter to last & consecutively
+   for(i=0;i<n;i++){
+       if(k[i] == k[n - i - 1]){
+          value++;
+        }
+   }
+   
+   //to check & print if above condition is true
+   if(value == n){
+       printf("%s is palindrome",k);
+   }
+   else
+       printf("%s is not palindrome",k);
+  
+}

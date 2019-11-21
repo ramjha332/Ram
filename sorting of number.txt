@@ -1,0 +1,34 @@
+
+#include<stdio.h>
+
+int main(){
+   int q[10],n=0,i=0,p[10],j=0;  //i,j,n for loops & p,q for integer array
+   printf("How many numbers you want to arrange?:");
+   scanf("%d",&n);
+   
+   printf("Enter %d numbers:",n);
+   
+   //for substituting a input to q array n number of times 
+   for(i=0;i<n;i++){
+       scanf("%d", &q[i]);
+   }
+    
+    //Comparing consecutive digits of array 
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(q[i]>q[j]){
+                p[i]=q[j];  //higher digit store to different array
+                q[j]=q[i];  //replacing highest digit to lowest
+                q[i]=p[i];  //higher digit succeds from its original place
+            }
+            
+        }
+    }
+    
+    //to print sorted inputs array
+    printf("Sorted numbers are:\n");
+    for(i=0;i<n;i++){
+    printf("%d\n", q[i]);
+    }
+    
+}

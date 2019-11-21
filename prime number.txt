@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int n=0,i=0,value=0,j=0;
+    printf("Enter the Number:\n");
+    scanf("%d", &n);
+    printf("Prime Numbers upto %d: \n", n);
+    for(i=1; i<=n; i++)
+    {
+        value=0;
+        for(j=1; j<=n; j++)
+        {
+            if(i%j==0)
+                value++;
+        }
+        if(value == 2)
+            printf("%d " ,i);
+    }
+}

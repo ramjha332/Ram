@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int n=0,i=0,j=0,k=0;
+    char st[100];
+
+    printf("Enter your string:\n");
+    scanf("%s",st);
+    n = strlen(st);
+    char rst[n];
+
+  for(i=0,j=(n-1);i<n,j>=0;i++,j--){
+          rst[j]=st[i];
+  }
+  
+  printf("Reverse string is: %s\n",rst);
+}

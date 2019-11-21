@@ -1,0 +1,18 @@
+{
+int i=0,n=0,sum=0,sum1=0,sum2=0;
+printf("Enter value of n: \n");
+   scanf("%d", &n);
+   
+   for(i=1;i<=n;i++){
+   if(i%2==0){
+               sum1+=i;
+           }
+   
+   if(i%2==1){
+               sum2+=i;
+           }
+               sum = sum1 + sum2;
+   
+   }
+	printf("Sum upto n = %d + %d = %d \n", sum2, sum1, sum );
+}
