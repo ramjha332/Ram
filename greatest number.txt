@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int n=0,i=0,temp=0;
+    printf("Write n number: ");
+    scanf("%d",&n);
+    
+    int k[n]; // define n elements array
+    printf("Enter %d inputs:",n);
+    for(i=0;i<n;i++){
+        scanf("%d", &k[i]);
+    }
+    
+    //to find largest number by comparing with temporary value
+    for(i=0;i<n;i++){
+        if(k[i] > temp){
+            temp = k[i];
+        }
+    }
+    
+    printf("Largest number is: %d", temp);
+}
